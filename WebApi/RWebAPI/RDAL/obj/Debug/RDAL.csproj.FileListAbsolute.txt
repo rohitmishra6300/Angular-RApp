@@ -1,0 +1,10 @@
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\RDAL.dll.config
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\RDAL.dll
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\RDAL.pdb
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\EntityFramework.dll
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\EntityFramework.xml
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\obj\Debug\RDAL.dll
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\obj\Debug\RDAL.pdb
+c:\Users\supre\documents\visual studio 2015\Projects\RWebAPI\RDAL\obj\Debug\RDAL.csprojResolveAssemblyReference.cache

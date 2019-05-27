@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-4 float-left">
+
+      </div>
+  <div class="col-4">
+      <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+  </div>
+  <div class="col-4 float-right">
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" method="POST">
+      <div class="form-group row" [ngClass]="{invalid: this.userForm.get('FirstName').errors && this.userForm.get('FirstName').touched }">
+        <label for="FirstName" class="col-2 col-form-label">First Name</label>
+        <div class="col-10">
+          <input type="text" id="FirstName" class="form-control" placeholder="First name" formControlName="FirstName">
+          <span class="uninvalid col-10">First Name is Required ! </span>
+        </div>
+      </div>
+      <div class="form-group row " [ngClass]="{invalid: this.userForm.get('LastName').errors && this.userForm.get('LastName').touched}" >
+        <label for="LastName" class="col-2 col-form-label">Last Name</label>
+        <div class="col-10">
+          <input type="text" class="form-control" id="LastName" placeholder="Last name" formControlName="LastName">
+          <span class="uninvalid col-10">Last Name is Required ! </span>
+        </div>
+      </div>
+      <div class="form-group row" [ngClass]="{invalid: this.userForm.get('Email').errors && this.userForm.get('Email').touched}" >
+        <label for="Email" class="col-2 col-form-label">Email</label>
+        <div class="col-10">
+          <input type="Email" id="Email" class="form-control" placeholder="Email" formControlName="Email">
+          <span class="uninvalid col-10" *ngIf="this.userForm.get('Email').errors">Email is required, Enter Valid Email Id  ! </span>
+        </div>
+      </div>
+      <div class="form-group  row" [ngClass]="{invalid: this.userForm.get('Address').errors && this.userForm.get('Address').touched}" >
+        <label for="Address" class="col-2 col-form-label">Address</label>
+        <div class="col-10">
+          <input type="text" id="Address" class="form-control" placeholder="Address" formControlName="Address">
+          <span class="uninvalid col-10">Address is required ! </span>
+        </div>
+      </div>
+      <div class="float-right">
+            <input type="submit" value="Save"  class="btn  btn-success btn-space-right" [disabled]="this.userForm.invalid"/>
+            <input type="reset" value="Reset" class="btn  btn-danger  " [ngClass]="{hideItem:this.title=='Edit User'}"/>
+            <input type="button" value="Delete" class="btn  btn-danger  " (click)="openModal(content)" [ngClass]="{hideItem:this.title=='Create User'}"/>
+            <a class="btn btn-info backButton"  [routerLink]="['/user']">Home</a>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header bg-info">
+    <h4 class="modal-title" id="modal-basic-title">Delete User</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure you want to delete this Record?</p>
+    <button type="button" class="btn  btn-danger float-right" (click)="confirmForDelete()">Confirm Delete</button>
+  </div>
+</ng-template>
+

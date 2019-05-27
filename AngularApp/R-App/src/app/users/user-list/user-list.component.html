@@ -1,0 +1,58 @@
+
+<div class="">
+    <div class="row">
+        <div class="col-12">
+          <div class="col-12">
+          <a class="btn btn-info float-right"  [routerLink]="['/user/create']">Add New</a>
+          <h4 class="float-left">{{title}}</h4>
+          </div>
+        </div>
+      </div>
+<br>
+      <div class="row ">
+          <div class="col-12">
+            
+              <div class="form-group">
+                <div class="col-3">
+                  <input type="text" id="term" class="form-control" placeholder="Filter" [(ngModel)]="term" #ctrl="ngModel">
+                </div>
+              </div>
+            
+           
+          </div>
+        </div>
+        
+      <div class="col-12">
+        <table class="table table-responsive table-bordered table-striped bg-light">
+          <thead>
+            <tr class="bg-info col-12">
+              <th class="col-2">Name</th>
+              <th class="col-3">Email</th>
+              <th class="col-6">Avatar</th>
+              <th class="col-1">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of this.results  |paginate: { itemsPerPage: this.pageSize, currentPage: page, id: 'user' } |filter:term;">
+             
+              <td>{{user.FirstName + " " +user.LastName}}</td>
+              <td>{{user.Email}}</td>
+              <td>{{user.Address}}</td>
+              <td>
+                <a [routerLink]="['/user/details',user.Id]" class="btn btn-sm btn-info " >Details</a>
+              </td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="container">
+      <div >
+          <ngb-pagination [collectionSize]="this.TotalCount" [(page)]="this.page" aria-label="Default pagination"  [boundaryLinks]="true" size="sm"><a class="btn btn-info float-right"  [routerLink]="['/user/create']"></a></ngb-pagination>
+      </div>
+</div> </div>
+</div>

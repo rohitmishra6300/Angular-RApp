@@ -1,0 +1,16 @@
+.invalid input {
+    border: solid 1px rgba(138, 24, 24, 0.863);
+ }
+ .invalid span{
+     display:block !important;
+     color:rgba(138, 24, 24, 0.863)
+ }
+  .uninvalid{
+    display:none !important;
+  } 
+ .invalid button{
+  pointer-events:none;
+ }
+.backButton{
+  margin-left: 5px !important;
+}

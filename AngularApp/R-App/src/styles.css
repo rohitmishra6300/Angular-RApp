@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+            
+    background-image: linear-gradient(100deg, #64b3f4 0%, #c2e59c 100%);
+
+    }
+
+.base-bg-color{
+    background-image: linear-gradient(100deg, #64b3f4 0%, #c2e59c 100%); 
+}
+.light-grn{
+    background-color: #c2e59c;
+}
+.linkwhite a{
+    color:white !important;
+            }
+            .transparent{
+               background-color: transparent !important;
+                        }
+
+            .dropdown-menu a {
+    color:black !important;
+            }
+            
+    
+    
+    body{
+        background-color: unset;
+    }
+    
+    .treeList {
+        list-style-type: none !important;
+        font-weight: bold;
+    }
+    
+    .treeList {
+        margin: 0;
+        padding: 0;
+    }
+    .treeList li{
+        list-style-type: none !important;
+    }
+    
+    .caret {
+        cursor: pointer;
+        -webkit-user-select: none;
+        /* Safari 3.1+ */
+        -moz-user-select: none;
+        /* Firefox 2+ */
+        -ms-user-select: none;
+        /* IE 10+ */
+        user-select: none;
+    }
+    
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+    
+    .caret-down::before {
+        -ms-transform: rotate(90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(90deg);
+        /* Safari */
+        
+    transform: rotate(90deg);
+    }
+    
+    .nested {
+        display: none;
+    }
+    
+    .active {
+        display: block;
+    }
+    .isFile{
+       list-style-type: circle;
+    }
+    
+    footer {
+        padding: 25px 0;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.3);
+        background-color: #222222;
+         position: fixed;
+        left: 0;
+        bottom: 0; width: 100%;
+    }
+    
+    footer p {
+        font-size: 12px;
+        margin: 0;
+    }
+    
+    footer ul {
+        margin-bottom: 0;
+    }
+    
+    footer ul li a {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    
+    footer ul li a:hover,
+    footer ul li a:focus,
+    footer ul li a:active,
+    footer ul li a.active {
+        text-decoration: none;
+    }
+    .margin-top-5p{
+        margin-top:5px;
+    }
+    .btn-space-right{
+        margin:5px;
+    }
+    .hideItem{
+        display: none;
+    }
+    
